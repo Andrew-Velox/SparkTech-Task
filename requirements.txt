@@ -1,0 +1,15 @@
+Django
+django-filter
+djangorestframework
+djangorestframework-simplejwt
+django-cors-headers
+python-dotenv
+drf-spectacular
+chromadb
+langchain-chroma
+langchain-groq
+langchain_huggingface
+langchain_community
+django-apscheduler
+sentence-transformers
+pypdf
