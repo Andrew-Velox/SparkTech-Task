@@ -139,9 +139,13 @@ This RAG Chatbot system provides a personal document-based Q&A experience. Each 
 
 4. **Create environment file**
    ```bash
-   # Create .env file in the project root
+   # Windows
+   type nul > .env
+   
+   # Linux/Mac
    touch .env
    ```
+   Then add your environment variables (see [Environment Variables](#environment-variables))
 
 5. **Run database migrations**
    ```bash
