@@ -117,8 +117,8 @@ This RAG Chatbot system provides a personal document-based Q&A experience. Each 
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd SparkTech_Task
+   git clone https://github.com/Andrew-Velox/SparkTech-Task.git
+   cd SparkTech-Task
    ```
 
 2. **Create a virtual environment**
@@ -147,6 +147,7 @@ This RAG Chatbot system provides a personal document-based Q&A experience. Each 
 
 6. **Run database migrations**
    ```bash
+   python manage.py makemigrations
    python manage.py migrate
    ```
 
@@ -171,20 +172,19 @@ This RAG Chatbot system provides a personal document-based Q&A experience. Each 
 Create a `.env` file in the project root with the following variables:
 
 ```env
+# Email Configuration (for sending welcome emails)
+EMAIL=your_email@gmail.com
+EMAIL_PASSWORD=your_email_app_password
+
 # Groq API Configuration
 GROQ_API_KEY=your_groq_api_key_here
-
-# Email Configuration (for sending welcome emails)
-EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
-EMAIL_USE_TLS=True
-EMAIL_HOST_USER=your_email@gmail.com
-EMAIL_HOST_PASSWORD=your_app_password
-
-# Django Settings (optional)
-SECRET_KEY=your_secret_key_here
-DEBUG=True
 ```
+
+**Note:** For Gmail, you need to generate an App Password:
+1. Enable 2-Factor Authentication on your Google account
+2. Go to Google Account → Security → 2-Step Verification → App passwords
+3. Generate a new app password for "Mail"
+4. Use this generated password as `EMAIL_PASSWORD`
 
 ### Getting a Groq API Key
 
